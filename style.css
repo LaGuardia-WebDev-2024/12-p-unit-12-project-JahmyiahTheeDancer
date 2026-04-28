@@ -1,6 +1,6 @@
 #movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
+  background: rgb(255, 177, 194);
+  border: 5px solid rgb(230, 124, 150);
   font-size: 24px;
   min-height: 160px;
   margin-top: 10px;
@@ -8,8 +8,16 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
+  background: rgb(255, 138, 163);
+  border: 5px solid rgb(231, 81, 113);
+  font-size: 24px;
+  min-height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#villan-result {
+  background: rgb(255, 108, 140);
+  border: 5px solid rgb(170, 33, 67);
   font-size: 24px;
   min-height: 160px;
   margin-top: 10px;
