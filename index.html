@@ -26,18 +26,19 @@ Select ONE Additional Feature to Add
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is my favorite Disney show?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">A.N.T Farm</option>
+          <option value="movie2">KC Undercover</option>
+          <option value="movie3">Mighty Med</option>
+          <option value="movie4">LabRats</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img id="movie-pic" width="300">
     </div>
     <hr />
     <!-- Book Question -->
@@ -45,32 +46,34 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">The Hate U Give</option>
+          <option value="book2">On The Come Up</option>
+          <option value="book3">Hunger Games</option>
+          <option value="book4">Harry Potter</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img id="book-pic" width="200">
     </div>
 
-   <form id="villan-form">
+   <form id="villain-form">
       <label>
-        📖 What is my favorite Villan?
-        <select id="villan-answer">
-          <option value="book1">villan 1</option>
-          <option value="book2">Villan 2</option>
-          <option value="book3">Villan 3</option>
-          <option value="book4">Villan 4</option>
+        📖 What is my favorite Disney Villain?
+        <select id="villain-answer">
+          <option value="villain1">Cruella Deville</option>
+          <option value="villain2"> Jafar </option>
+          <option value="villain3">Dr.Facilier</option>
+          <option value="villain4">Scar</option>
         </select>
       </label>
-      <button type="submit">Check Villan Answer</button>
+      <button type="submit">Check Villain Answer</button>
     </form>
-    <div id="villan-result">
-      <p id="villan-text"></p>
+    <div id="villain-result">
+      <p id="villain-text"></p>
+      <img id="villain-pic" width="200">
     </div>
 
 
@@ -88,8 +91,9 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "movie4") {
+          $("#movie-text").text("OMGGG  YESSSS!");
+           $("#movie-pic").attr("src","https://play-lh.googleusercontent.com/Q2xEt_PARX67VeJMMTRVoo9gd-I6b46C7yeW7TnquZnZrJSf5_X9m-YESl7siJe4QefW=w600-h300-pc0xffffff-pd")
         } 
         else {
           $("#movie-text").text("Try Again!");
@@ -105,12 +109,29 @@ Select ONE Additional Feature to Add
 
         if (answer === "book1") {
           $("#book-text").text("YESSSS!");
+          $("#book-pic").attr("src","https://mvhsoracle.com/wp-content/uploads/2018/10/5b999df9353af-3-e1540872572355.png")
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#book-text").text("Sorry not correct!");
         }
       });
       
+       //======================Villain add on
+
+       $("#villain-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#villain-answer");
+        var answer = $answer.val();
+
+        if (answer === "villain3") {
+          $("#villain-text").text("YESSSS!");
+          $("#villain-pic").attr("src","https://static.wikia.nocookie.net/disney/images/1/1d/Castingaspell.png/revision/latest?cb=20120720021947")
+        } 
+        else {
+          $("#villain-text").text("Not quite there!");
+        }
+      });
     </script>
   </body>
 
