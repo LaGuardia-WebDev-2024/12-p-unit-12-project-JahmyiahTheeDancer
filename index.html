@@ -93,7 +93,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie4") {
           $("#movie-text").text("OMGGG  YESSSS!");
-           $("#movie-pic").attr("src","https://play-lh.googleusercontent.com/Q2xEt_PARX67VeJMMTRVoo9gd-I6b46C7yeW7TnquZnZrJSf5_X9m-YESl7siJe4QefW=w600-h300-pc0xffffff-pd")
+           $("#movie-pic").hide().attr("src","https://play-lh.googleusercontent.com/Q2xEt_PARX67VeJMMTRVoo9gd-I6b46C7yeW7TnquZnZrJSf5_X9m-YESl7siJe4QefW=w600-h300-pc0xffffff-pd").slideDown(2000)
         } 
         else {
           $("#movie-text").text("Try Again!");
@@ -109,7 +109,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "book1") {
           $("#book-text").text("YESSSS!");
-          $("#book-pic").attr("src","https://mvhsoracle.com/wp-content/uploads/2018/10/5b999df9353af-3-e1540872572355.png")
+          $("#book-pic").hide().attr("src","https://mvhsoracle.com/wp-content/uploads/2018/10/5b999df9353af-3-e1540872572355.png").fadeIn(2000)
         } 
         else {
           $("#book-text").text("Sorry not correct!");
@@ -127,7 +127,14 @@ Select ONE Additional Feature to Add
         if (answer === "villain3") {
           $("#villain-text").text("YESSSS!");
           $("#villain-pic").attr("src","https://static.wikia.nocookie.net/disney/images/1/1d/Castingaspell.png/revision/latest?cb=20120720021947")
-        } 
+       
+          $("#villain-pic").animate({
+         width: "400px",
+         marginLeft: "100px",
+        }, 1500 );
+        
+      }
+      
         else {
           $("#villain-text").text("Not quite there!");
         }
